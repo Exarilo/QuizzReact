@@ -3,9 +3,10 @@ import axios from 'axios';
 
 function WordPress({}) {
   const [posts, setPosts] = useState([]);
+  var questionnaire = []
 
   useEffect(() => {
-    axios.get('https://g3.esiee-it.o3creative.fr/wp-json/wp/v2/postes')
+    axios.get('https://g3.esiee-it.o3creative.fr/wp-json/wp/v2/quiz')
       .then(response => {
         setPosts(response.data);
       })
@@ -13,18 +14,20 @@ function WordPress({}) {
         console.log(error);
       });
   }, []);
-
+  console.log(posts)
+  posts.map(post => {
+    questionnaire.push({
+      titre : post.title.rendered,
+      content : post.acf.question
+    })
+  })
   return (
     <div>
       <h2>Notre questionnaire : </h2>
-      <ul>
-        {posts.map(post => (
-          <li key={post.id}>
-            <h3>{post.title.rendered}</h3>
-            <p dangerouslySetInnerHTML={{ __html: post.content.rendered }}></p>
-          </li>
-        ))}
-      </ul>
+          <div>
+            <h3>{questionnaire[2].titre}</h3>
+            <p dangerouslySetInnerHTML={{ __html: questionnaire[2].content}}></p>
+          </div>
     </div>
   );
 }

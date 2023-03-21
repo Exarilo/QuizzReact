@@ -21,15 +21,18 @@ function WordPress({}) {
       content : post.acf.question
     })
   })
-  return (
-    <div>
-      <h2>Notre questionnaire : </h2>
-          <div>
-            <h3>{questionnaire[2].titre}</h3>
-            <p dangerouslySetInnerHTML={{ __html: questionnaire[2].content}}></p>
-          </div>
-    </div>
-  );
+  if(questionnaire.length > 0){
+    return (
+      <div>
+        <h2>Notre questionnaire : </h2>
+            <div>
+              <h3>{questionnaire[0].titre}</h3>
+              <p dangerouslySetInnerHTML={{ __html: questionnaire[0].content}}></p>
+            </div>
+      </div>
+    );
+  }
+
 }
 
 export default WordPress;

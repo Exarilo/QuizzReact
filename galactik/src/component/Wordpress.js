@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import '../styles/Wordpress.css'
 
 function WordPress({}) {
   const [posts, setPosts] = useState([]);
@@ -8,7 +9,7 @@ function WordPress({}) {
   const handleClick = () =>{
 
     setIndex(index + 1) 
-    if(index > (questionnaire.length -1)){
+    if(index >= (questionnaire.length -1)){
       setIndex(0) 
     }
 }
@@ -16,7 +17,7 @@ function WordPress({}) {
   useEffect(() => {
     axios.get('https://g3.esiee-it.o3creative.fr/wp-json/wp/v2/quiz')
       .then(response => {
-        setPosts(response.data);
+        setPosts(response.data.reverse());
       })
       .catch(error => {
         console.log(error);
@@ -31,14 +32,15 @@ function WordPress({}) {
   if(questionnaire.length > 0){
     console.log(questionnaire)
     return (
-      <div>
-        <h2>Notre questionnaire : </h2>
-            <div>
-              <h3>{questionnaire[index].titre}</h3>
-              <p dangerouslySetInnerHTML={{ __html: questionnaire[index].content}}></p>
-              <button onClick={handleClick}>Suivant</button>
-            </div>
+    <div className="quiz-box">
+      <h2 className="quiz-title">Notre questionnaire :</h2>
+      <div className="quiz-content">
+        <h3>{questionnaire[index].titre}</h3>
+        <p dangerouslySetInnerHTML={{ __html: questionnaire[index].content}}></p>
+        <button className="quiz-button" onClick={handleClick}>Suivant</button>
       </div>
+    </div>
+
     );
   }
 

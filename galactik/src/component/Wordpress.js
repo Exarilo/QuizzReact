@@ -46,20 +46,26 @@ function WordPress({}) {
     <div className="quiz-box">
       <h2 className="quiz-title">Notre questionnaire :</h2>
       <div className="quiz-content">
-        <h3>{questionnaire[index].titre}</h3>
-        <p dangerouslySetInnerHTML={{ __html: questionnaire[index].content}}></p>
+
+      <fieldset>
+      <legend>{questionnaire[index].titre}</legend>
+        <p className="question" dangerouslySetInnerHTML={{ __html: questionnaire[index].content}}></p>
         {questionnaire[index].reponses.map((value) => (
-                <div>
-                  <input type="checkbox" id={value.question} value='false' />
-                  <label >{value.question}</label>
-                </div>
-              )) } 
+          <div>
+            <input type="checkbox" id={value.question} value='false' />
+            <label >{value.question}</label>
+          </div>
+        )) } 
+    </fieldset>
+
+
+
         <br></br><br></br>      
         <button className="quiz-button" onClick={ handleClick }>Suivant</button>
         <nav id="sidebar">
         <NavLink to="/Home">Home</NavLink>
-        </nav>
-      </div>
+        </nav>   
+      </div>  
     </div>
 
     );
@@ -71,12 +77,13 @@ function WordPress({}) {
       <div className="quiz-content">
         <h3>Notre Petit Quiz est fini Voici votre score</h3>
         <h2>{ numBonneReponse }/{ questionnaire.length }</h2>
-
-      </div>
-    </div>
+      </div>  
+     </div>
 
     );
   }
+
+    
 }
 
 export default WordPress;

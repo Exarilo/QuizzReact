@@ -54,14 +54,15 @@ function WordPress({}) {
       <div className="quiz-content">
 
       <fieldset>
-        <legend>{questionnaire[index].titre}</legend>
-          <p className="question" dangerouslySetInnerHTML={{ __html: questionnaire[index].content}}></p>
-          {questionnaire[index].reponses.map((value) => (
-          <div>
-            <input type="checkbox" id={value.question} value='false' />
-            <label >{value.question}</label>
-          </div>
-        )) } 
+      <legend>{questionnaire[index].titre}</legend>
+      <p className="question" dangerouslySetInnerHTML={{ __html: questionnaire[index].content }}></p>
+      {questionnaire[index].reponses.map((value) => (
+        <div className="question-checkbox" key={value.question}>
+          
+          <input type="checkbox" id={value.question} value='false' />
+          <label htmlFor={value.question}>{value.question}</label>
+        </div>
+      ))}
     </fieldset>
 
         <br></br><br></br><br></br>      

@@ -8,7 +8,8 @@ legend{
     font-weight: bold;
 }
 .question{
-    font-size: 20px;
+    text-decoration: solid underline purple 2px;
+    font-size: 25px;
     font-weight: bold;
     color: #bd3240;
 }
@@ -152,14 +153,25 @@ legend{
         transform: translateY(-5%);
     }
   }
+  .question-checkbox {
+    margin-left: 45%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .question-checkbox label {
+    margin-right: 10px;
+  }
   
+
   input[type=checkbox] {
+    margin-bottom: 15px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     width: 20px;
     height: 20px;
-    border: 2px solid #ccc;
+    border: 2px solid #000000;
     border-radius: 5px;
     background-color: #fff;
     margin-right: 10px;

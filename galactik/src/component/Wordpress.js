@@ -48,9 +48,9 @@ function WordPress({}) {
       <div className="quiz-content">
 
       <fieldset>
-      <legend>{questionnaire[index].titre}</legend>
-        <p className="question" dangerouslySetInnerHTML={{ __html: questionnaire[index].content}}></p>
-        {questionnaire[index].reponses.map((value) => (
+        <legend>{questionnaire[index].titre}</legend>
+          <p className="question" dangerouslySetInnerHTML={{ __html: questionnaire[index].content}}></p>
+          {questionnaire[index].reponses.map((value) => (
           <div>
             <input type="checkbox" id={value.question} value='false' />
             <label >{value.question}</label>
@@ -58,10 +58,9 @@ function WordPress({}) {
         )) } 
     </fieldset>
 
-
-
         <br></br><br></br>      
         <button className="quiz-button" onClick={ handleClick }>Suivant</button>
+        
         <nav id="sidebar">
         <NavLink to="/Home">Home</NavLink>
         </nav>   

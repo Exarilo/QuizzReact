@@ -124,6 +124,7 @@ legend{
     position: relative;
   }
   
+
   .quiz-button::before {
     content: '';
     display: block;

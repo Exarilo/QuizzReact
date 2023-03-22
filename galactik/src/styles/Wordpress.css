@@ -1,13 +1,18 @@
 
 
+label{
+    font-size: 22px;
+}
+
+
 legend{
     font-size: 25px;
+    font-weight: bold;
 }
 .question{
     font-size: 20px;
     font-weight: bold;
     color: #bd3240;
-    
 }
 .quiz-box {
     border: 1px solid black;
@@ -71,18 +76,23 @@ legend{
     animation: fadeIn 0.5s ease-in-out;
   }
   
+
   .quiz-button {
-    background-color: #045414;
-    border: none;
-    color: white;
-    padding: 15px 32px;
+    font-size: 2rem;
+    text-shadow: -1px -1px #0c0, 1px 1px #060, -3px 0 4px #000;
+    font-family:Arial, Helvetica, sans-serif;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #045414;
+    color: white;
+    border: none;
+    border-radius: 5px;
     font-size: 16px;
-    margin: 4px 2px;
-    transition: background-color 0.3s ease;
-    animation: slideIn 0.5s ease-in-out;
+    cursor: pointer;
+    position: relative;
   }
   
   .quiz-button:hover {
@@ -108,22 +118,6 @@ legend{
       opacity: 1;
     }
   }
-  
-
-  .quiz-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    position: relative;
-  }
-  
 
   .quiz-button::before {
     content: '';

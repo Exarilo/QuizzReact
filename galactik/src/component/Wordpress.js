@@ -63,13 +63,8 @@ function WordPress({}) {
           </div>
         )) } 
     </fieldset>
-
-        <br></br><br></br>      
+        <br></br><br></br> <br></br>      
         <button className="quiz-button" onClick={ handleClick }>Suivant</button>
-        
-        <nav id="sidebar">
-        <NavLink to="/Home">Home</NavLink>
-        </nav>   
       </div>  
     </div>
     </div>

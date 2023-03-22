@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import Header from './Header';
-import '../styles/home.css'
+import '../styles/Home.css'
 
 const Home = () => {
     const [posts, setPosts] = useState([]);

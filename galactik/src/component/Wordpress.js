@@ -1,27 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/Wordpress.css'
-import Home from './Home';
 import { NavLink } from 'react-router-dom';
+import Header from './Header';
 
 function WordPress({}) {
   const [posts, setPosts] = useState([]);
   const [index, setIndex] = useState(0)
   const [numBonneReponse, setCompteBonneReponse] = useState(0)
   var questionnaire = []
-  var quizEnd = false
 
 
 
   const handleClick = () =>{
+    var mauvaiseReponse = false;
+    var bonneReponse = false;
     {questionnaire[index].reponses.map((value) => 
       {
         if(document.getElementById(value.question).checked === true){
-          value.bonne_reponse === true && setCompteBonneReponse(numBonneReponse + 1)
-          document.getElementById(value.question).checked = false
+          value.bonne_reponse === true ? bonneReponse = true : mauvaiseReponse = true;
+          document.getElementById(value.question).checked = false;
         }
       }) 
     }
+    (!mauvaiseReponse && bonneReponse) && setCompteBonneReponse(numBonneReponse + 1)
     setIndex(index + 1) 
   }
 
@@ -43,6 +45,10 @@ function WordPress({}) {
   })
   if(questionnaire.length > 0 && index < questionnaire.length){
     return (
+      <div>
+
+
+      <Header />
     <div className="quiz-box">
       <h2 className="quiz-title">Notre questionnaire :</h2>
       <div className="quiz-content">
@@ -66,18 +72,23 @@ function WordPress({}) {
         </nav>   
       </div>  
     </div>
+    </div>
 
     );
   }
   else if(index >= (questionnaire.length - 1)){
     return (
-    <div className="quiz-box">
-      <h2 className="quiz-title">Notre questionnaire :</h2>
-      <div className="quiz-content">
-        <h3>Notre Petit Quiz est fini Voici votre score</h3>
-        <h2>{ numBonneReponse }/{ questionnaire.length }</h2>
-      </div>  
-     </div>
+    <div>
+      <Header/>
+      <div className="quiz-box">
+        <h2 className="quiz-title">Notre questionnaire :</h2>
+        <div className="quiz-content">
+          <h3>Notre Petit Quiz est fini Voici votre score</h3>
+          <h2>{ numBonneReponse }/{ questionnaire.length }</h2>
+
+        </div>
+      </div>
+    </div>
 
     );
   }

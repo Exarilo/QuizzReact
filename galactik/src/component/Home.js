@@ -2,6 +2,8 @@ import React from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
+import Header from './Header';
+import '../styles/home.css'
 
 const Home = () => {
     const [posts, setPosts] = useState([]);
@@ -26,7 +28,9 @@ const Home = () => {
       //console.log(home)
     if(home){
         return (
-            <div>
+            <div>            
+                    <Header />
+                    <div className='divHome'>
                     {
 
                         home.map(value => (
@@ -48,7 +52,7 @@ const Home = () => {
                     </div>
 
 
-    
+                    </div>
             </div>
         );
     }

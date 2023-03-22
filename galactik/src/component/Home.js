@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import Header from './Header';
-import '../styles/Home.css'
+import '../styles/home.css'
 import { NavLink } from 'react-router-dom';
 
 const Home = () => {
@@ -55,7 +55,7 @@ const Home = () => {
                     <br></br>
                     <br></br>
                     <div>
-                        <button className = "quiz-button" ><NavLink to="/Quiz">Participer au Quiz</NavLink></button>
+                        <button className = "quiz-button" >Participer au Quiz<NavLink to="/Quiz"></NavLink></button>
                     </div>
 
 

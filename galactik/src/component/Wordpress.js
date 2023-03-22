@@ -45,7 +45,7 @@ function WordPress({}) {
   })
   if(questionnaire.length > 0 && index < questionnaire.length){
     return (
-      <div>
+      <div className="main">
 
 
       <Header />
@@ -63,7 +63,8 @@ function WordPress({}) {
           </div>
         )) } 
     </fieldset>
-        <br></br><br></br> <br></br>      
+
+        <br></br><br></br><br></br>      
         <button className="quiz-button" onClick={ handleClick }>Suivant</button>
       </div>  
     </div>

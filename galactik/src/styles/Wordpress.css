@@ -1,5 +1,4 @@
 
-
 label{
     font-size: 22px;
 }
@@ -15,6 +14,7 @@ legend{
     color: #bd3240;
 }
 .quiz-box {
+    min-height:50vh;
     border: 1px solid black;
     background-color: #f2f2f2;
     padding: 20px;

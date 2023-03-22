@@ -4,7 +4,9 @@ import WordPress from './component/Wordpress';
 
 function App() {
   return (
+    
     <div className="App">
+
       <WordPress />
     </div>
   );

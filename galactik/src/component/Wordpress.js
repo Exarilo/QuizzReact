@@ -37,13 +37,13 @@ function WordPress({}) {
       <div className="quiz-content">
         <h3>{questionnaire[index].titre}</h3>
         <p dangerouslySetInnerHTML={{ __html: questionnaire[index].content}}></p>
+        <br></br><br></br>
         <button className="quiz-button" onClick={handleClick}>Suivant</button>
       </div>
     </div>
 
     );
   }
-
 }
 
 export default WordPress;

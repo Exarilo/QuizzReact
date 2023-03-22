@@ -9,8 +9,8 @@ const MyRouteur = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<WordPress />} />
-                <Route path='/Home' element={<Home />} />
+                <Route path='/Quiz' element={<WordPress />} />
+                <Route path='/' element={<Home />} />
                 <Route path='*' element={<Error404 />} />
                 <Route path='/Error404' element={<Error404 />} />
             </Routes>

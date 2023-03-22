@@ -4,13 +4,14 @@ import axios from 'axios';
 import { useState } from 'react';
 import Header from './Header';
 import '../styles/Home.css'
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
     const [posts, setPosts] = useState([]);
     var home = []
 
     const handleClick = () => {
-            
+            <NavLink to="/Wordpress">Quiz</NavLink>
     }
 
     useEffect(() => {
@@ -54,7 +55,7 @@ const Home = () => {
                     <br></br>
                     <br></br>
                     <div>
-                        <button className = "quiz-button"  onClick = { handleClick }>Participer au Quiz</button>
+                        <button className = "quiz-button" ><NavLink to="/Quiz">Participer au Quiz</NavLink></button>
                     </div>
 
 

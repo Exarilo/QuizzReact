@@ -32,3 +32,6 @@
     animation: bounce 0.8s;
     animation-fill-mode: forwards;
   }
+  .divHome{
+    text-align: center;
+  }

@@ -2,10 +2,15 @@ import React from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
+import '../styles/Wordpress.css'
 
 const Home = () => {
     const [posts, setPosts] = useState([]);
     var home = []
+
+    const handleClick = () => {
+            
+    }
 
     useEffect(() => {
         axios.get('https://g3.esiee-it.o3creative.fr/wp-json/wp/v2/posts?acf_format=standard')
@@ -43,8 +48,10 @@ const Home = () => {
                     <div>
                         <img src = 'https:\/\/g3.esiee-it.o3creative.fr\/wp-content\/uploads\/2023\/03\/home.jpg'>{home.image}</img>
                     </div>
+                    <br></br>
+                    <br></br>
                     <div>
-                        <button link = ''>Participer au Quiz</button>
+                        <button className = "quiz-button"  onClick = { handleClick }>Participer au Quiz</button>
                     </div>
 
 

@@ -15,7 +15,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-        axios.get('https://g3.esiee-it.o3creative.fr/wp-json/wp/v2/posts?acf_format=standard')
+        axios.get('https://g3.esiee-it.o3creative.fr/wp-json/wp/v2/posts?tags=4')
           .then(response => {
             setPosts(response.data.reverse());
           })
@@ -24,11 +24,12 @@ const Home = () => {
           });
       }, []);
       posts.map(post => {
-        home.push({
-          titre : post.title.rendered,
-          contenu : post.content.rendered,
-          image : post.acf.image.rendered,
-        })
+        console.log(post.tags[0])
+          home.push({
+            titre : post.title.rendered,
+            contenu : post.content.rendered,
+            image : post.acf.image.rendered,
+          })
       })
       //console.log(home)
     if(home){

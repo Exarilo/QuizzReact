@@ -45,9 +45,11 @@ function WordPress({}) {
   })
   if(questionnaire.length > 0 && index < questionnaire.length){
     return (
-      <div className="main">
+      <div>
       <Header />
-      <br></br><br></br><br></br><br></br>  
+      <div className="main">
+      <br></br><br></br><br></br><br></br> 
+    
     <div className="quiz-box">
       <h2 className="quiz-title">Notre questionnaire :</h2>
       <div className="quiz-content">
@@ -69,6 +71,7 @@ function WordPress({}) {
       </div>  
     </div>
     </div>
+    </div> 
 
     );
   }

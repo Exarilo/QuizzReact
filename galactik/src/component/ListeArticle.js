@@ -3,13 +3,13 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import Header from './Header';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import '../styles/ListeArticle.css'
+
 
 const ListeArticle = () => {
     const [posts, setPosts] = useState([]);
     var ListeArticle = []
-
     useEffect(() => {
         axios.get('https://g3.esiee-it.o3creative.fr/wp-json/wp/v2/posts?tags=3')
           .then(response => {
@@ -23,6 +23,7 @@ const ListeArticle = () => {
         console.log(post.tags[0])
           ListeArticle.push({
             titre : post.title.rendered,
+            slug : "/Article/"+post.slug
           })
       })
     return (
@@ -35,7 +36,7 @@ const ListeArticle = () => {
 
                         ListeArticle.map(value => (
                             <div className = "DivListeArticle">
-                            <h2><NavLink to="/Article">{value.titre}</NavLink></h2>
+                            <h2><NavLink to={value.slug}>{value.titre}</NavLink></h2>
                             </div>
 
                         ))

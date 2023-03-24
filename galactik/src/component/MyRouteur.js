@@ -4,6 +4,7 @@ import Home from './Home';
 import WordPress from './Wordpress';
 import Error404 from './Error404';
 import ListeArticle from './ListeArticle';
+import Article from './Article';
 
 const MyRouteur = () => {
     return (
@@ -14,6 +15,7 @@ const MyRouteur = () => {
                 <Route path='*' element={<Error404 />} />
                 <Route path='/Error404' element={<Error404 />} />
                 <Route path='/ListeArticle' element={<ListeArticle />} />
+                <Route path='/Article/:slug' element={<Article />} />
             </Routes>
         </BrowserRouter>
     );

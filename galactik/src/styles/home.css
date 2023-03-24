@@ -9,6 +9,27 @@ text-align: left;
 
 .titre{
 text-align: center;
+font-size: 2rem;
+text-shadow: -1px -1px #0c0, 1px 1px #060, -3px 0 4px #000;
+font-family:Arial, Helvetica, sans-serif;
+padding:16px;
+font-weight:lighter;
+-moz-box-shadow: 2px 2px 6px #888;  
+-webkit-box-shadow: 2px 2px 6px #888;  
+box-shadow:2px 2px 6px #888;  
+text-align:center;
+display:block;
+margin:16px;
+letter-spacing: 0.1em;
+color: #ffffff;
+text-transform: uppercase;
+border-bottom: 2px solid transparent;
+padding-bottom: 0.5rem;
+margin-bottom: 1.5rem;
+position: relative;
+transition: all 0.4s ease;
+background-color: #045414; 
+text-shadow: -1px -1px #0c0, 1px 1px #060, -3px 0 4px #000;
 }
 
 .quiz-box {
@@ -31,4 +52,11 @@ text-align: center;
 
 .quiz-button{
 color: white;
+}
+
+.main{
+  background-image: url('https://www.agn-avocats.fr/wp-content/uploads/2020/02/football-stadium-shiny-lights-view-from-field-PWS5ZD9-scaled.jpg');
+  background-repeat: no-repeat;
+  height: 85vh;
+  width: 100vw;
 }

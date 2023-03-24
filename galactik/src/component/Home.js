@@ -32,37 +32,39 @@ const Home = () => {
         return (
             <div>            
                     <Header />
-                    <br></br>
-                    <br></br>
-                    <div className = "quiz-box">
-                        <div className='divHome'>
-                        {
+                    <div className = "main">
+                          <br></br>
+                          <br></br>
+                          <div className = "quiz-box">
+                              <div className='divHome'>
+                              {
 
-                            home.map(value => (
-                                <div className = "TitrePres">
-                                <h1 className = "titre">{value.titre}</h1>
-                                <h3 dangerouslySetInnerHTML={{ __html: value.contenu}}></h3>
-                                {/*<img src = 'https:\/\/g3.esiee-it.o3creative.fr\/wp-content\/uploads\/2023\/03\/home.jpg'>{value.image}</img>*/}
-                                </div>
+                                  home.map(value => (
+                                      <div className = "TitrePres">
+                                      <h1 className = "titre">{value.titre}</h1>
+                                      <h3 dangerouslySetInnerHTML={{ __html: value.contenu}}></h3>
+                                      {/*<img src = 'https:\/\/g3.esiee-it.o3creative.fr\/wp-content\/uploads\/2023\/03\/home.jpg'>{value.image}</img>*/}
+                                      </div>
 
-                            ))
-                            
-                            
-                        }
+                                  ))
+                                  
+                                  
+                              }
 
-                        <br></br>
-                        <br></br>
-                        <div>
-                            <button className = "quiz-button" ><NavLink to="/Quiz">Participer au Quiz</NavLink></button>
+                              <br></br>
+                              <br></br>
+                              <div>
+                                  <button className = "quiz-button" ><NavLink to="/Quiz">Participer au Quiz</NavLink></button>
+                              </div>
+
+
+                              </div>
                         </div>
-
-
-                        </div>
-                  </div>
-                        <br></br>
-                        <div className = "imageFoot">
-                            <img src = 'https:\/\/g3.esiee-it.o3creative.fr\/wp-content\/uploads\/2023\/03\/home.jpg'>{home.image}</img>
-                        </div>
+                              <br></br>
+                              <div className = "imageFoot">
+                                  <img src = 'https:\/\/g3.esiee-it.o3creative.fr\/wp-content\/uploads\/2023\/03\/home.jpg'>{home.image}</img>
+                              </div>
+                    </div>
             </div>
         );
     }

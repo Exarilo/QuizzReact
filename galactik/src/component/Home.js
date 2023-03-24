@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import Header from './Header';
-import '../styles/Home.css'
+import '../styles/home.css'
 import { NavLink } from 'react-router-dom';
 
 const Home = () => {

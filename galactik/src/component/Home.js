@@ -3,16 +3,12 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import Header from './Header';
-import '../styles/home.css'
+import '../styles/Home.css'
 import { NavLink } from 'react-router-dom';
 
 const Home = () => {
     const [posts, setPosts] = useState([]);
     var home = []
-
-    const handleClick = () => {
-            <NavLink to="/Wordpress">Quiz</NavLink>
-    }
 
     useEffect(() => {
         axios.get('https://g3.esiee-it.o3creative.fr/wp-json/wp/v2/posts?tags=4')

@@ -7,70 +7,61 @@ import '../styles/Home.css'
 import { NavLink } from 'react-router-dom';
 
 const Home = () => {
-    const [posts, setPosts] = useState([]);
-    var home = []
+  const [posts, setPosts] = useState([]);
+  var home = []
 
-    useEffect(() => {
-        axios.get('https://g3.esiee-it.o3creative.fr/wp-json/wp/v2/posts?tags=4')
-          .then(response => {
-            setPosts(response.data.reverse());
-          })
-          .catch(error => {
-            console.log(error);
-          });
-      }, []);
-      posts.map(post => {
-        console.log(post.tags[0])
-          home.push({
-            titre : post.title.rendered,
-            contenu : post.content.rendered,
-            image : post.acf.image.rendered,
-          })
+  useEffect(() => {
+    axios.get('https://g3.esiee-it.o3creative.fr/wp-json/wp/v2/posts?tags=4')
+      .then(response => {
+        setPosts(response.data.reverse());
       })
-      //console.log(home)
-    if(home){
-        return (
-            <div>            
-                    <Header />
-                    <div className = "main">
-                          <br></br>
-                          <br></br>
-                          <div className = "quiz-box">
-                              <div className='divHome'>
-                              {
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
+  posts.map(post => {
+    console.log(post.tags[0])
+    home.push({
+      titre: post.title.rendered,
+      contenu: post.content.rendered,
+      image: post.acf.image.rendered,
+    })
+  })
+  //console.log(home)
+  if (home) {
+    return (
+      <div>
+        <Header />
+        <div className="main">
+          <br></br>
+          <br></br>
+          <div className="quiz-box">
+            <div className='divHome'>
+              {
 
-                                  home.map(value => (
-                                      <div className = "TitrePres">
-                                      <h1 className = "titre">{value.titre}</h1>
-                                      <text dangerouslySetInnerHTML={{ __html: value.contenu}}></text>
-                                      </div>
+                home.map(value => (
+                  <div className="TitrePres">
+                    <h1 className="titre">{value.titre}</h1>
+                    <text dangerouslySetInnerHTML={{ __html: value.contenu }}></text>
+                  </div>
 
-                                  ))
-                                  
-                                  
-                              }
-
-                              <br></br>
-                              <br></br>
-                              <div>
-<<<<<<< Updated upstream
-                                  <button  ><NavLink className = "quiz-button" to="/Quiz">Participer au Quiz</NavLink></button>
-=======
-                                  <button className = "quiz-button" ><NavLink  to="/Quiz">Participer au Quiz</NavLink></button>
->>>>>>> Stashed changes
-                              </div>
+                ))
 
 
-                              </div>
-                        </div>
-                              <br></br>
-{/*                              <div className = "imageFoot">
-                                  <img src = 'https:\/\/g3.esiee-it.o3creative.fr\/wp-content\/uploads\/2023\/03\/home.jpg'>{home.image}</img>
-                            </div>*/}
-                    </div>
+              }
+
+              <br></br>
+              <br></br>
+                <div>
+                  <button  ><NavLink className="quiz-button" to="/Quiz">Participer au Quiz</NavLink></button>
+                </div>
             </div>
-        );
-    }
+          </div>
+          <br></br>
+        </div>
+      </div>
+    );
+  }
 
 };
 

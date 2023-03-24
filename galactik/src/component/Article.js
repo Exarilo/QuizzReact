@@ -23,11 +23,13 @@ const Article = () => {
           <div>
             <Header />
                 <div className ="main">
-                    <div className='divArticle'>
-                        <h1 className= "titreArticle" dangerouslySetInnerHTML={{ __html: posts[0].title.rendered}}></h1>
-                        <text dangerouslySetInnerHTML={{ __html: posts[0].content.rendered}}></text>                  
-                          <img src={posts[0].acf.image[0]}></img>               
-                    </div>
+                  <br></br>
+                  <br></br>
+                      <div className = "article-box">
+                          <h1 style={{ margin: "0px" }} className= "titreArticle" dangerouslySetInnerHTML={{ __html: posts[0].title.rendered}}></h1>
+                          <text dangerouslySetInnerHTML={{ __html: posts[0].content.rendered}}></text>                  
+                          <img src={posts[0].acf.image[0]}></img> 
+                      </div>
                 </div>
 
           </div> 

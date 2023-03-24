@@ -1,4 +1,34 @@
 
-  .divHome{
+.divHome{
     text-align: center;
   }
+
+.TitrePres{
+  text-align: left;
+}
+
+.titre{
+  text-align: center;
+}
+
+.quiz-box {
+    margin: 0 auto;
+      width: 50%;
+      height: 100%;
+      border: 1px solid black;
+      padding: 20px;
+      animation: slideIn 0.5s ease-in-out;
+      background-image: url('https://media.foot-national.com/18/2022/05/photo_article/778597/306447/1200-L-ligue-1-le-champion-de-la-plus-belle-pelouse-du-championnat-est.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      text-align: center;
+}
+
+.imageFoot{
+  text-align: center;
+}
+
+.quiz-button{
+  color: white;
+}

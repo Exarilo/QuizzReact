@@ -23,8 +23,8 @@ const Article = () => {
           <div>
             <Header />
             <div className='divArticle'>
-                <h1>{posts[0].title.rendered}</h1>
-                <h3 dangerouslySetInnerHTML={{ __html: posts[0].content.rendered}}></h3>                  
+                <h1 dangerouslySetInnerHTML={{ __html: posts[0].title.rendered}}></h1>
+                <text dangerouslySetInnerHTML={{ __html: posts[0].content.rendered}}></text>                  
                   <img src={posts[0].acf.image[0]}></img>                     
             </div>
           </div> 

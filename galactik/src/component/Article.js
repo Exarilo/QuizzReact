@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect,useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import '../styles/Article.css'
+import '../styles/Article.css';
 import Header from './Header';
 
 const Article = () => {
@@ -22,11 +22,14 @@ const Article = () => {
         return (
           <div>
             <Header />
-            <div className='divArticle'>
-                <h1 dangerouslySetInnerHTML={{ __html: posts[0].title.rendered}}></h1>
-                <text dangerouslySetInnerHTML={{ __html: posts[0].content.rendered}}></text>                  
-                  <img src={posts[0].acf.image[0]}></img>                     
-            </div>
+                <div className ="main">
+                    <div className='divArticle'>
+                        <h1 className= "titreArticle" dangerouslySetInnerHTML={{ __html: posts[0].title.rendered}}></h1>
+                        <text dangerouslySetInnerHTML={{ __html: posts[0].content.rendered}}></text>                  
+                          <img src={posts[0].acf.image[0]}></img>               
+                    </div>
+                </div>
+
           </div> 
       );
     }

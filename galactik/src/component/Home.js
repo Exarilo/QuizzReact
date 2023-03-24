@@ -43,7 +43,6 @@ const Home = () => {
                                       <div className = "TitrePres">
                                       <h1 className = "titre">{value.titre}</h1>
                                       <text dangerouslySetInnerHTML={{ __html: value.contenu}}></text>
-                                      {/*<img src = 'https:\/\/g3.esiee-it.o3creative.fr\/wp-content\/uploads\/2023\/03\/home.jpg'>{value.image}</img>*/}
                                       </div>
 
                                   ))

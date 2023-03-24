@@ -17,3 +17,13 @@
   color: #61dafb;
 }
 
+
+.custom-link {
+  color: #6b7078;
+  background: #333333;
+}
+
+.custom-link.active {
+  color: #ffffff;
+  background: #3338ba;
+}

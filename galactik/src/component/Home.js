@@ -54,7 +54,11 @@ const Home = () => {
                               <br></br>
                               <br></br>
                               <div>
+<<<<<<< Updated upstream
                                   <button  ><NavLink className = "quiz-button" to="/Quiz">Participer au Quiz</NavLink></button>
+=======
+                                  <button className = "quiz-button" ><NavLink  to="/Quiz">Participer au Quiz</NavLink></button>
+>>>>>>> Stashed changes
                               </div>
 
 

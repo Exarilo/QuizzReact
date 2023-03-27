@@ -35,8 +35,8 @@ const Home = () => {
         <div className="main">
           <br></br>
           <br></br>
-          <div className="quiz-box">
-            <div className='divHome'>
+          <div className = "article">
+            <div className='titreArticle'>
               {
 
                 home.map(value => (
@@ -49,11 +49,8 @@ const Home = () => {
                                   
                                   
               }
-
-              <br></br>
-              <br></br>
                 <div>
-                  <button  ><NavLink className="quiz-button" to="/Quiz">Participer au Quiz</NavLink></button>
+                  <NavLink className="buttonParticiper" to="/Quiz">Participer au Quiz</NavLink>
                 </div>
             </div>
           </div>

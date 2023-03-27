@@ -47,10 +47,12 @@ function WordPress({}) {
     return (
       <div>
       <Header />
+
+
+ 
       <div className="main">
-      <br></br><br></br><br></br><br></br> 
-    
-    <div className="quiz-box">
+      <div className = "article">
+      <div className = "titreArticle">
       <h2 className="quiz-title">Notre questionnaire :</h2>
       <div className="quiz-content">
 
@@ -71,7 +73,9 @@ function WordPress({}) {
       </div>  
     </div>
     </div>
-    </div> 
+    </div>
+    </div>
+ 
 
     );
   }
@@ -79,7 +83,9 @@ function WordPress({}) {
     return (
     <div>
       <Header/>
-      <div className="quiz-box">
+      <div className="mainArticle">
+          <div className = "article">
+            <div className='titreArticle'>
         <h2 className="quiz-title">Notre questionnaire :</h2>
         <div className="quiz-content">
           <h3>Notre Petit Quiz est fini Voici votre score</h3>
@@ -87,6 +93,8 @@ function WordPress({}) {
 
         </div>
       </div>
+      </div>
+    </div>
     </div>
 
     );

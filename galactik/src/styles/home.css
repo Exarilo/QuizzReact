@@ -3,9 +3,7 @@
   text-align: center;
 }
 
-.TitrePres{
-text-align: left;
-}
+
 
 .titre{
 text-align: center;
@@ -32,31 +30,34 @@ background-color: #045414;
 text-shadow: -1px -1px #0c0, 1px 1px #060, -3px 0 4px #000;
 }
 
-.quiz-box {
-  margin: 0 auto;
-    width: 50%;
-    height: 100%;
-    border: 1px solid black;
-    padding: 20px;
-    animation: slideIn 0.5s ease-in-out;
-    background-image: url('https://media.foot-national.com/18/2022/05/photo_article/778597/306447/1200-L-ligue-1-le-champion-de-la-plus-belle-pelouse-du-championnat-est.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    text-align: center;
-}
+
 
 .imageFoot{
 text-align: center;
 }
 
-.quiz-button{
-color: white;
+
+
+
+
+.TitrePres{
+  height: 100%;
 }
 
-.main{
-  background-image: url('https://www.agn-avocats.fr/wp-content/uploads/2020/02/football-stadium-shiny-lights-view-from-field-PWS5ZD9-scaled.jpg');
-  background-repeat: no-repeat;
-  height: 85vh;
-  width: 100vw;
+.buttonParticiper{
+  font-size: 2rem;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  width: 100px;
 }

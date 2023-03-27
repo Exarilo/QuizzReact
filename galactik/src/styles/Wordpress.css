@@ -1,10 +1,5 @@
 
-.main{
-  background-image: url('https://www.agn-avocats.fr/wp-content/uploads/2020/02/football-stadium-shiny-lights-view-from-field-PWS5ZD9-scaled.jpg');
-  background-repeat: no-repeat;
-  height: 85vh;
-  width: 100vw;
-}
+
 label{
     font-size: 22px;
     color: #000000;
@@ -15,6 +10,10 @@ fieldset {
   border: 5px solid #1F497D;
   border-radius: 5px;
   padding: 15px;
+}
+
+.question{
+  margin-top: 10px;
 }
 
 fieldset legend {
